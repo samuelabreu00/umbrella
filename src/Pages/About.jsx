@@ -1,0 +1,18 @@
+import React from 'react'
+import { Header } from '../components/Header/Header'
+import { Main } from '../Screens/AboutScreen/Meio/main'
+import { ComoSurgiu } from '../Screens/AboutScreen/ComoSurgiu/ComoSurgiu'
+import { Footer } from '../components/Footer/Footer'
+import { SaudeMente } from '../Screens/AboutScreen/SaudeMente/SaudeMente'
+
+export const About = () => {
+  return (
+    <>
+    <Header/>
+    <Main/>
+    <ComoSurgiu/>
+    <SaudeMente/>
+    <Footer/>
+    </>
+  )
+}

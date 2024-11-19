@@ -1,0 +1,96 @@
+section.demandas .containerDemandas{
+    max-width: 1350px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 3rem 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.demandas .containerDemandas h1{
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+section.demandas .containerDemandas h1 span{
+    font-weight: bolder;
+}
+section.demandas .containerDemandas .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    position: relative;
+    width: 100%;
+}
+section.demandas .containerDemandas .box::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #ffffff;
+    bottom: -37px;
+    border-radius: 100px;
+}
+section.demandas .containerDemandas .box .left{
+    width: 37%;
+}
+section.demandas .containerDemandas .box .left h2{
+    font-size: 43px;
+    background-color: rgb(130 10 209);
+    display: inline;
+    padding: 5px;
+    color: #fff;
+}
+section.demandas .containerDemandas .box .left p{
+    width: 100%;
+    margin: 1rem 0;
+    color: #fff;
+    font-weight: 500;
+}
+section.demandas .containerDemandas .box img{
+    width: 500px;
+}
+section.demandas .containerDemandas .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.demandas .containerDemandas .title h3{
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+}
+section.demandas .containerDemandas .title h3>span{
+    font-weight: bolder;
+}
+@media (max-width:980px) {
+    section.demandas .containerDemandas .box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    section.demandas .containerDemandas .box .left{
+        width: 100%;
+    }
+    section.demandas .containerDemandas .box::after{
+        width: 100%;
+    }
+}
+@media (max-width:550px){
+    section.demandas .containerDemandas .box img{
+        width: 100%;
+    }
+    section.demandas .containerDemandas .box .left h2{
+        font-size: 32px;
+    }
+    section.demandas .containerDemandas h1{
+        font-size: 32px;
+        width: 100%;
+    }
+}

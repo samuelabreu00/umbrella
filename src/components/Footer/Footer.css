@@ -1,0 +1,14 @@
+footer{
+    background-color: #343434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+}
+footer img{
+    width: 200px;
+}
+footer p{
+    color: #fff;
+}

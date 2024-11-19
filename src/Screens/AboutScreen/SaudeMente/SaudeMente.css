@@ -1,0 +1,49 @@
+section.saude{
+    background-image: url(../../../assets/fundoImgSaude.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 120vh;
+}
+section.saude h1.absolut{
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+  color: transparent; 
+  -webkit-text-stroke:1px rgba(218, 218, 218, 0.161); 
+  text-align: center; 
+  font-weight: 800;
+  display: inline;
+}
+section.saude .containerSaude{
+    max-width: 1350px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+section.saude .containerSaude .text{
+    padding-top: 2rem;
+    width: 45%;
+}
+section.saude .containerSaude .text h1{
+    font-size: 55px;
+    line-height: 49px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+section.saude .containerSaude .text p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+}
+section.saude .containerSaude .text p span{
+    font-weight: bold;
+}
+section.saude .containerSaude .text p.ultimo{
+    margin-bottom: 2rem;
+}

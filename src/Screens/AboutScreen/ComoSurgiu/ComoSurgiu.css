@@ -1,0 +1,73 @@
+section.surgiu{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5rem 0 14rem;
+}
+section.surgiu img.absolut{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 110px;
+    opacity: .1;
+}
+section.surgiu img.absolut2{
+    position: absolute;
+    bottom: 0px;
+    left: -200px;
+    width: 400px;
+}
+section.surgiu img.absolut3{
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    width: 100px;
+    opacity: .1;
+}
+section.surgiu .containerSurgiu{
+    max-width: 1350px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+section.surgiu .containerSurgiu img{
+    width: 480px;
+}
+section.surgiu .containerSurgiu .right{
+    width: 37%;
+    position: relative;
+}
+section.surgiu .containerSurgiu .right img{
+    position: absolute;
+    top: -48px;
+    left: -70px;
+    width: 125%;
+    height: 120%;
+    z-index: -1;
+
+}
+section.surgiu .containerSurgiu .right h1{
+    font-size: 55px;
+    color: #fff;
+    
+}
+section.surgiu .containerSurgiu .right p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    position: relative;
+    margin: 10px 0 50px ;
+
+}
+section.surgiu .containerSurgiu .right p span{
+    font-weight: bold;
+}
+section.surgiu .containerSurgiu .right p span.orange{
+    color: #FFB0A1;
+    font-style: italic;
+}
