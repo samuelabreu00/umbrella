@@ -5,6 +5,10 @@ section.saude{
     position: relative;
     min-height: 120vh;
 }
+section.saude img.absolut{
+    display: none;
+    position: absolute;
+}
 section.saude h1.absolut{
     position: absolute;
     top: -160px;
@@ -46,4 +50,49 @@ section.saude .containerSaude .text p span{
 }
 section.saude .containerSaude .text p.ultimo{
     margin-bottom: 2rem;
+}
+@media (max-width:860px){
+    section.saude{
+        min-height: 70vh;
+        background-size: cover;
+        padding: 1rem 0;
+    }
+    section.saude h1.absolut{
+        font-size: 3rem;
+        width: 100%;
+        padding: 0 24px;
+    }
+}
+@media (max-width:777px){
+    section.saude{
+        background-image: url(../../../assets/fundoSaudeMobile.png);
+    }
+    section.saude .containerSaude{
+        justify-content: flex-start;
+    }
+    section.saude .containerSaude .text{
+        width: 70%;
+        position: relative;
+    }
+   
+    section.saude img.absolut{
+        display: block;
+        width: 400px;
+        bottom: 165px;
+        right: 0;
+    }
+}
+@media (max-width:560px){
+    section.saude img.absolut{
+        display: block;
+        width: 300px;
+        bottom: 184px;
+        right: 0;
+        opacity: .6;
+    }
+}
+@media (max-width:450px){
+    section.saude .containerSaude .text{
+        width: 100%;
+    }
 }

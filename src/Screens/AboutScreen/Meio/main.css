@@ -124,3 +124,31 @@ section.main .containerMain .containerBox .box p:hover{
     transform: scale(1.08);
     color: #5e008e
 }
+@media (max-width:950px) {
+    section.main .containerMain .flex{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    section.main .containerMain .boxTitle{
+        width: 100%;
+    }
+    section.main .containerMain .boxTitle{
+        align-items: center;
+    }
+    section.main .containerMain .boxTitle p{
+        text-align: center;
+    }
+    section.main .containerMain .boxTitle h1{
+        text-align: center;
+    }
+}
+@media (max-width:500px){
+    section.main .containerMain .flex img{
+        width: 100%;
+    }
+}
+@media (max-width:420px){
+    section.main .containerMain .containerBox .box{
+        width: 250px;
+    }
+}

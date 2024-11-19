@@ -1,11 +1,13 @@
 import React from 'react'
 import './SaudeMente.css'
 import {ButtonAgendarWhite} from '../../../components/ButtonAgendarWhite/ButtonAgendarWhite'
+import imgHomem from '../../../assets/Camada 4.png'
 
 export const SaudeMente = () => {
   return (
     <>
     <section className="saude">
+      <img src={imgHomem} alt="" className='absolut'/>
       <h1 className='absolut'>SAÚDE ALÉM DA MENTE</h1>
         <div className="containerSaude">
             <div className="text">
