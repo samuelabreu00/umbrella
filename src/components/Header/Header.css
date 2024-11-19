@@ -25,11 +25,13 @@ header .container-header nav ul{
 }
 header .container-header nav ul li{
     list-style: none;
+    text-align: center;
 }
 header .container-header nav ul li a{
     text-decoration: none;
     color: #fff;
     transition: .2s;
+    
 }
 header .container-header nav ul li a:hover{
     opacity: .8;
