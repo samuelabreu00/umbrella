@@ -3,7 +3,7 @@ section.saude{
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 120vh;
+    min-height: 100vh;
 }
 section.saude img.absolut{
     display: none;
@@ -90,8 +90,6 @@ section.saude .containerSaude .text p.ultimo{
         right: 0;
         opacity: .6;
     }
-}
-@media (max-width:450px){
     section.saude .containerSaude .text{
         width: 100%;
     }
