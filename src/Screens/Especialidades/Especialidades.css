@@ -1,11 +1,14 @@
 section.especialidades{
     background-image: url(../../assets/bgRoxo.png);
-    padding: 0 24px;
+    padding: 2rem 24px;
+      -webkit-box-shadow: 0px -15px 68px 58px rgba(120,48,161,1);
+-moz-box-shadow: 0px -15px 68px 58px rgba(120,48,161,1);
+box-shadow: 0px -15px 68px 58px rgba(120,48,161,1); 
+position: relative;
 }
 section.especialidades .containerEspecialidades{
     max-width: 1350px;
-    margin: 1rem auto;
-    padding: 24px;
+    margin: 1rem auto;;
     box-sizing: content-box;
    
     min-height: 70vh;
