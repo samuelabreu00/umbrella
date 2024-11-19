@@ -101,7 +101,7 @@ section.apresentacao .containerApresentacao img.block{
         justify-content: space-between;
     }
     section.apresentacao .containerApresentacao img.block{
-        width: 300px;
+        width: 100%;
         display: block;
     }
     section.apresentacao .containerApresentacao .boxText p{
