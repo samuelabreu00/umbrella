@@ -80,7 +80,7 @@ section.apresentacao .containerApresentacao img.block{
     section.apresentacao .containerApresentacao .boxText .titles h2{
         font-size: 26px;
     }
-    
+
     section.apresentacao .containerApresentacao .boxText p{
         font-size: 16px;
     }
@@ -105,7 +105,7 @@ section.apresentacao .containerApresentacao img.block{
         display: block;
     }
     section.apresentacao .containerApresentacao .boxText p{
-        width: 80%;
+        width: 100%;
     }
 }
 @media (max-width:420px){
