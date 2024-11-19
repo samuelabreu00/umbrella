@@ -87,11 +87,12 @@ section.apresentacao .containerApresentacao .boxText a{
         width: 76%;
     }
     section.apresentacao .containerApresentacao{
-        min-height: 100vh;
+        min-height: 130vh;
+        align-items: start;
+        padding-top: 5rem;
     }
     section.apresentacao .containerApresentacao .boxText p{
         width: 80%;
-        color: #fff;
     }
 }
 @media (max-width:420px){
@@ -99,4 +100,5 @@ section.apresentacao .containerApresentacao .boxText a{
         font-size: 55px;
         line-height: 49px;
     }
+
 }
