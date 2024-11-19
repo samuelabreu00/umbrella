@@ -84,7 +84,7 @@ section.saude .containerSaude .text p.ultimo{
 }
 @media (max-width:560px){
     section.saude img.absolut{
-        display: block;
+        display: none;
         width: 300px;
         bottom: 168px;
         right: 0;
@@ -92,5 +92,8 @@ section.saude .containerSaude .text p.ultimo{
     }
     section.saude .containerSaude .text{
         width: 100%;
+    }
+    section.saude .containerSaude .text p{
+        font-weight: 300;
     }
 }
