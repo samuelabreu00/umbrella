@@ -127,6 +127,9 @@ section.main .containerMain .containerBox .box p:hover{
     color: #5e008e
 }
 @media (max-width:950px) {
+    section.main .containerMain .boxTitle .text{
+        width: 100%;
+    }
     section.main .containerMain .flex{
         flex-direction: column-reverse;
         align-items: center;
