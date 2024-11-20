@@ -1,12 +1,12 @@
 import React from 'react'
 import {Header} from '../components/Header/Header'
-import Formulario from '../Screens/Doubt/ScreenForm/Formulario';
+import Cadastro from '../Screens/Doubt/ScreenForm/Cadastro'
 
 export const Doubt = () => {
   return (
     <>
     <Header/>
-    <Formulario/>
+    <Cadastro/>
     </>
   )
 }
