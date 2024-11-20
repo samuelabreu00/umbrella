@@ -88,12 +88,12 @@ export const Cadastro = () => {
             <label htmlForfor="check">Quinta-feira</label></div>
             
             <div className="grupo"><input type="checkbox" id="check" name="dia" value='sexta feira'/>
-            <label htmlForfor="check">Sexta-feira</label>
-</div>
+              <label htmlForfor="check">Sexta-feira</label>
+            </div>
             
             <div className="grupo"><input type="checkbox" id="check" name="dia" value='sabado'/>
-            <label htmlForfor="check">Sábado</label>
-</div>
+            < label htmlForfor="check">Sábado</label>
+            </div>
 
             <div className="grupo"> <input type="checkbox" id="check" name="dia" value='todos os dias'/>
             <label htmlForfor="check">TENHO DISPONIBILIDADE EM TODOS OS DIAS (OU MARQUE CONFORME SUA DISPONIBILIDADE).</label></div>
