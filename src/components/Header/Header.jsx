@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './Header.css'
 import Logo from "../../assets/logoHeader.png"
 import { ButtonAgendarWhite } from '../ButtonAgendarWhite/ButtonAgendarWhite'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export const Header = () => {
 
@@ -60,16 +60,48 @@ export const Header = () => {
   return (
     <header>
         <div className="container-header">
-            <Link to='/'> <img src={Logo} alt="Logo" /></Link>
+            <Link to='/'> <img src={Logo} alt="Logo"/></Link>
             <nav className='nav-menu'>
                 <ul>
-                    <li><Link to='/sobre' onClick={closeMenu}>Quem somos</Link></li>
+                    <li>
+                      <NavLink 
+                        to='/sobre' 
+                        onClick={closeMenu}
+                        className={({ isActive }) => isActive ? "active-link" : ""}
+                      >
+                        Quem somos
+                      </NavLink>
+                    </li>
                     <span></span>
-                    <li><Link to='/nosprocure' onClick={closeMenu}>Quando devo procurar a Umbrella?</Link></li>
+                    <li>
+                      <NavLink 
+                        to='/nosprocure' 
+                        onClick={closeMenu}
+                        className={({ isActive }) => isActive ? "active-link" : ""}
+                      >
+                        Quando devo procurar a Umbrella?
+                      </NavLink>
+                    </li>
                     <span></span>
-                    <li><Link to='/serviçosempresariais' onClick={closeMenu}>Serviços Empresariais</Link></li>
+                    <li>
+                      <NavLink 
+                        to='/serviçosempresariais' 
+                        onClick={closeMenu}
+                        className={({ isActive }) => isActive ? "active-link" : ""}
+                      >
+                        Serviços Empresariais
+                      </NavLink>
+                    </li>
                     <span></span>
-                    <li><Link to='/club' onClick={closeMenu}>Umbrella Club</Link></li>
+                    <li>
+                      <NavLink 
+                        to='/club' 
+                        onClick={closeMenu}
+                        className={({ isActive }) => isActive ? "active-link" : ""}
+                      >
+                        Umbrella Club
+                      </NavLink>
+                    </li>
                     <ButtonAgendarWhite />
                 </ul>
             </nav>
