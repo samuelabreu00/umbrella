@@ -4,6 +4,7 @@ section.form{
     justify-content: center;
     align-items: center;
     padding: 24px;
+    position: relative;
 }
 section.form form{
     max-width: 650px;
@@ -77,3 +78,28 @@ section.form form .buttonContainer{
 section.form form sup{
     color: red;
 }
+
+/* Tela de carregamento */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que a tela de loading fique sobre tudo */
+  }
+  
+  .loading-spinner {
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    border: 2px solid white; /* Adiciona borda para visibilidade */
+  }
+  
+  

@@ -8,6 +8,8 @@ import './Form.css';
 export const Cadastro = () => {
   const form = useRef();
   const [paises, setPaises] = useState([]);
+  const [loading, setLoading] = useState(false); // Estado de carregamento
+  const [sending, setSending] = useState(false); // Estado de bloqueio para evitar múltiplos envios
 
   // Função para buscar os países da API
   useEffect(() => {
@@ -31,6 +33,11 @@ export const Cadastro = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Bloqueia o envio se o processo estiver em andamento
+    if (sending) {
+      return;
+    }
+
     const formData = new FormData(form.current);
     const name = formData.get('name');
     const message = formData.get('mensage');
@@ -41,15 +48,41 @@ export const Cadastro = () => {
       return;
     }
 
+    setLoading(true); // Iniciar o estado de loading
+    setSending(true); // Bloquear o envio enquanto o processo estiver em andamento
+
+    // Envio imediato
     emailjs
       .sendForm('gmailMensage', 'template_prdixfp', form.current, 'hnKo67_lMLCletrBg')
       .then(
-        () => toast.success('Email enviado com sucesso!'),
+        () => {
+          toast.success('Email enviado com sucesso!');
+          setLoading(false); // Parar o loading após o envio
+        },
         (error) => {
           console.error('Erro ao enviar:', error.text);
           toast.error('Falha ao enviar o email. Tente novamente.');
+          setLoading(false); // Parar o loading após o envio
         }
       );
+
+    // Envio após 5 minutos
+    setTimeout(() => {
+      if (!sending) return; // Garantir que não continuamos o envio se já tiver ocorrido um erro
+
+      emailjs
+        .sendForm('gmailMensage', 'template_prdixfp', form.current, 'hnKo67_lMLCletrBg')
+        .then(
+          () => {
+            toast.success('Segundo email enviado com sucesso!');
+            setLoading(false); // Parar o loading após o envio
+          },
+          (error) => {
+            toast.error('Falha ao enviar o segundo email. Tente novamente.');
+            setLoading(false); // Parar o loading após o envio
+          }
+        );
+    }, 300000); // 5 minutos = 300000 ms
   };
 
   return (
@@ -143,6 +176,16 @@ export const Cadastro = () => {
           </div>
         </form>
       </section>
+
+      {/* Tela de carregamento */}
+      {loading && (
+        <div className="loading-overlay">
+          <div className="loading-spinner">
+            <span>Carregando...</span>
+          </div>
+        </div>
+      )}
+
       <ToastContainer />
     </>
   );
