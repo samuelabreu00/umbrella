@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Header.css'
 import Logo from "../../assets/logoHeader.png"
 import { ButtonAgendarWhite } from '../ButtonAgendarWhite/ButtonAgendarWhite'
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
 
 export const Header = () => {
 
@@ -49,27 +48,30 @@ export const Header = () => {
       document.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
-  
+
+  // Função para fechar o menu ao clicar em um link
+  const closeMenu = () => {
+    const hamburguer = document.querySelector(".hamburguer");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburguer.classList.remove("active");
+    navMenu.classList.remove("active");
+  };
 
   return (
-    <>
     <header>
         <div className="container-header">
-        <Link to='/'> <img src={Logo} alt="" /></Link>
+            <Link to='/'> <img src={Logo} alt="Logo" /></Link>
             <nav className='nav-menu'>
-               
                 <ul>
-                    <li><Link to='/sobre'>Quem somos</Link></li>
+                    <li><Link to='/sobre' onClick={closeMenu}>Quem somos</Link></li>
                     <span></span>
-                    <li><Link to='/nosprocure'>Quando devo procurar a Umbrella?</Link></li>
+                    <li><Link to='/nosprocure' onClick={closeMenu}>Quando devo procurar a Umbrella?</Link></li>
                     <span></span>
-                    <li><Link to='/serviçosempresariais'>Serviços Empresariais</Link></li>
+                    <li><Link to='/serviçosempresariais' onClick={closeMenu}>Serviços Empresariais</Link></li>
                     <span></span>
-                    <li><Link to='/club'>Umbrella Club</Link></li>
-                    <ButtonAgendarWhite/>
+                    <li><Link to='/club' onClick={closeMenu}>Umbrella Club</Link></li>
+                    <ButtonAgendarWhite />
                 </ul>
-
             </nav>
             <div className="container-hamburguer">
               <div className="hamburguer">
@@ -80,6 +82,5 @@ export const Header = () => {
             </div>
         </div>
     </header>
-    </>
-  )
+  );
 }

@@ -75,6 +75,9 @@ section.demandas .containerDemandas .title h3>span{
         align-items: flex-start;
         gap: 2rem;
     }
+    section.demandas .containerDemandas .box.invert{
+        flex-direction: column-reverse;
+    }
     section.demandas .containerDemandas .box .left{
         width: 100%;
     }

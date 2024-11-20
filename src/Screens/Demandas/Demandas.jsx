@@ -27,7 +27,7 @@ export const Demandas = () => {
                 <img src={imgRelacionamentos} alt="" />
             </div>
 
-            <div className="box">
+            <div className="box invert">
                
                 <img src={imgProcrastinação} alt="" />
                 <div className="left">
@@ -50,7 +50,7 @@ export const Demandas = () => {
                 <img src={imgAnsiedade} alt="" />
             </div>
 
-            <div className="box">
+            <div className="box invert">
             <img src={imgDepressão} alt="" />
                 <div className="left">
                     <h2>Depressão</h2>
@@ -73,7 +73,7 @@ export const Demandas = () => {
                 <img src={imgBurnout} alt="" />
             </div>
 
-            <div className="box">
+            <div className="box invert">
             <img src={imgSono} alt="" />
                 <div className="left">
                     <h2>Distúrbios do sono</h2>
