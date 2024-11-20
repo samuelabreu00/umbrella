@@ -7,7 +7,6 @@ import { UmbrellaClub } from "./Pages/UmbrellaClub"
 
 
 function App() {
-
   return (
     <>
     <BrowserRouter>

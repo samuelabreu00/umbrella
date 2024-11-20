@@ -2,7 +2,6 @@ import React from 'react'
 import {Header} from '../components/Header/Header'
 import { Cadastro } from '../Screens/Doubt/ScreenForm/Cadastro'
 
-
 const Doubt = () => {
   return (
     <>
@@ -11,4 +10,5 @@ const Doubt = () => {
     </>
   )
 }
+
  export default Doubt
