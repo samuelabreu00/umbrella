@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './Form.css'
+import './Form.css';
 
 export const Cadastro = () => {
   const form = useRef();
@@ -14,20 +14,17 @@ export const Cadastro = () => {
     const formData = new FormData(form.current);
     const name = formData.get('name');
     const message = formData.get('mensage');
+    const email = formData.get('email');
 
-    if (!name || !message) {
-      // Mensagem de erro para campos vazios
-      toast.error('Por favor, preencha todos os campos antes de enviar.');
+    if (!name || !message || !email) {
+      toast.error('Por favor, preencha todos os campos obrigatórios antes de enviar.');
       return;
     }
 
-    // Enviar email se todos os campos estiverem preenchidos
     emailjs
       .sendForm('gmailMensage', 'template_prdixfp', form.current, 'hnKo67_lMLCletrBg')
       .then(
-        () => {
-          toast.success('Email enviado com sucesso!');
-        },
+        () => toast.success('Email enviado com sucesso!'),
         (error) => {
           console.error('Erro ao enviar:', error.text);
           toast.error('Falha ao enviar o email. Tente novamente.');
@@ -37,95 +34,67 @@ export const Cadastro = () => {
 
   return (
     <>
-    <section className="form">
-      <form ref={form} onSubmit={sendEmail}>
+      <section className="form">
+        <form ref={form} onSubmit={sendEmail}>
           <div className="box">
-            <label>Nome Completo</label>
-            <input type="text" name="name"  />
+            <label htmlFor="name">Nome Completo</label>
+            <input type="text" name="name" id="name" />
           </div>
 
           <div className="box">
-            <label>Data de Nascimento</label>
-            <input type='date' name='telefone' />
+            <label htmlFor="birthdate">Data de Nascimento</label>
+            <input type="date" name="birthdate" id="birthdate" />
           </div>
-      
 
           <div className="box">
-            <label>Motivo do acompanhamento psicológico</label>
-            <textarea name="mensage" placeholder="Sua mensagem" />
+            <label htmlFor="mensage">Motivo do acompanhamento psicológico</label>
+            <textarea name="mensage" id="mensage" placeholder="Sua mensagem" />
           </div>
 
           <div className="box">
             <label>Qual turno você teria disponibilidade para o atendimento?</label>
-
             <div className="grupo">
-              <input type="radio" id="radio" name="horario" value="manhã" checked />
-              <label htmlForfor="radio">Manhã</label>
+              <input type="radio" id="radio_manha" name="horario" value="manhã" defaultChecked />
+              <label htmlFor="radio_manha">Manhã</label>
             </div>
-         
-            <div className="grupo"><input type="radio" id="radio" name="horario" value="tarde" checked />
-            <label htmlForfor="radio">Tarde</label></div>
-            
-            <div className="grupo">   <input type="radio" id="radio" name="horario" value="noite" checked />
-            <label htmlForfor="radio">Noite</label></div>
-         
+            <div className="grupo">
+              <input type="radio" id="radio_tarde" name="horario" value="tarde" />
+              <label htmlFor="radio_tarde">Tarde</label>
+            </div>
+            <div className="grupo">
+              <input type="radio" id="radio_noite" name="horario" value="noite" />
+              <label htmlFor="radio_noite">Noite</label>
+            </div>
           </div>
-         
-         <div className="box">
-            <label>QUAL MELHOR DIA DA SEMANA PRO SEU ATENDIMENTO? SE VOCÊ PODE MAIS DE UM DIA, MARQUE TODAS AS ALTERNATIVAS QUE VOCÊ TERIA DISPONIBILIDADE.</label>
 
+          <div className="box">
+            <label>Qual o melhor dia para atendimento? (marque todas as alternativas aplicáveis)</label>
+            {['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Todos os dias'].map((dia, index) => (
+              <div key={index} className="grupo">
+                <input type="checkbox" id={`check_${index}`} name="dia" value={dia} />
+                <label htmlFor={`check_${index}`}>{dia}</label>
+              </div>
+            ))}
+          </div>
 
-            <div className="grupo"><input type="checkbox" id="check" name="dia" value='segunda feira'/>
-            <label htmlForfor="check">Segunda-feira</label></div>
-            
-            <div className="grupo"><input type="checkbox" id="check" name="dia" value='terça feira'/>
-            <label htmlForfor="check">Terça-feira</label></div>
-            
-            <div className="grupo"> <input type="checkbox" id="check" name="dia" value='quarta feira'/>
-            <label htmlForfor="check">Quarta-feira</label></div>
-           
-            <div className="grupo"><input type="checkbox" id="check" name="dia" value='quinta feira'/>
-            <label htmlForfor="check">Quinta-feira</label></div>
-            
-            <div className="grupo"><input type="checkbox" id="check" name="dia" value='sexta feira'/>
-              <label htmlForfor="check">Sexta-feira</label>
-            </div>
-            
-            <div className="grupo"><input type="checkbox" id="check" name="dia" value='sabado'/>
-            < label htmlForfor="check">Sábado</label>
-            </div>
+          <div className="box">
+            <label htmlFor="moradia">Onde você mora?</label>
+            <input type="text" name="moradia" id="moradia" />
+          </div>
 
-            <div className="grupo"> <input type="checkbox" id="check" name="dia" value='todos os dias'/>
-            <label htmlForfor="check">TENHO DISPONIBILIDADE EM TODOS OS DIAS (OU MARQUE CONFORME SUA DISPONIBILIDADE).</label></div>
-           
+          <div className="box">
+            <label htmlFor="telefone">Seu Whatsapp</label>
+            <input type="tel" name="telefone" id="telefone" />
+          </div>
 
-         </div>
+          <div className="box">
+            <label htmlFor="email">Seu melhor email</label>
+            <input type="email" name="email" id="email" />
+          </div>
 
-         <div className="box">
-            <label>Onde você mora?</label>
-            <input type="text" name='moradia' />
-         </div>
-
-
-         <div className="box">
-            <label>Seu Whatsapp </label>
-            <input type="tel" name='telefone' />
-         </div>
-
-         
-         <div className="box">
-            <label>Seu melhor email</label>
-            <input type="text" name='email' />
-         </div>
-
-         <div className="box">
-            <label>Seu melhor email</label>
-            <input type="text" name='email' />
-         </div>
-         
-          <input type="submit" value="Send" />
-      </form>
-    </section>
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
       <ToastContainer />
     </>
   );
