@@ -3,7 +3,6 @@ import {Header} from '../components/Header/Header'
 import { Cadastro } from '../Screens/Doubt/ScreenForm/Cadastro'
 
 
-
 export const Doubt = () => {
   return (
     <>
