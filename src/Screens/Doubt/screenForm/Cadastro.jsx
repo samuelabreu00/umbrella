@@ -10,7 +10,7 @@ export const Cadastro = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Validação dos campos do formulário
+  
     const formData = new FormData(form.current);
     const name = formData.get('name');
     const message = formData.get('mensage');
