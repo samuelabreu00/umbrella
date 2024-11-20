@@ -1,41 +1,41 @@
 import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Form.css';
 
 export const Cadastro = () => {
-  const form = useRef();
+  // const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    // Validação dos campos do formulário
-    const formData = new FormData(form.current);
-    const name = formData.get('name');
-    const message = formData.get('mensage');
-    const email = formData.get('email');
+  //   // Validação dos campos do formulário
+  //   const formData = new FormData(form.current);
+  //   const name = formData.get('name');
+  //   const message = formData.get('mensage');
+  //   const email = formData.get('email');
 
-    if (!name || !message || !email) {
-      toast.error('Por favor, preencha todos os campos obrigatórios antes de enviar.');
-      return;
-    }
+  //   if (!name || !message || !email) {
+  //     toast.error('Por favor, preencha todos os campos obrigatórios antes de enviar.');
+  //     return;
+  //   }
 
-    emailjs
-      .sendForm('gmailMensage', 'template_prdixfp', form.current, 'hnKo67_lMLCletrBg')
-      .then(
-        () => toast.success('Email enviado com sucesso!'),
-        (error) => {
-          console.error('Erro ao enviar:', error.text);
-          toast.error('Falha ao enviar o email. Tente novamente.');
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm('gmailMensage', 'template_prdixfp', form.current, 'hnKo67_lMLCletrBg')
+  //     .then(
+  //       () => toast.success('Email enviado com sucesso!'),
+  //       (error) => {
+  //         console.error('Erro ao enviar:', error.text);
+  //         toast.error('Falha ao enviar o email. Tente novamente.');
+  //       }
+  //     );
+  // };
 
   return (
     <>
       <section className="form">
-        <form ref={form} onSubmit={sendEmail}>
+        <form >
           <div className="box">
             <label htmlFor="name">Nome Completo</label>
             <input type="text" name="name" id="name" />
