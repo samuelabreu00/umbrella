@@ -1,5 +1,5 @@
 import { About } from "./Pages/About"
-import  Doubt  from "./Pages/Doubt"
+import  {Doubt}  from "./Pages/Doubt"
 import { Home } from "./Pages/Home"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Services } from "./Pages/Services"
