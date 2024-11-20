@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './form.css'
+import './Form.css'
 
-export const Form = () => {
+export const Formulario = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
