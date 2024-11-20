@@ -5,7 +5,6 @@ import { Cadastro } from '../Screens/Doubt/ScreenForm/Cadastro'
 export const Doubt = () => {
   return (
     <>
-    <Header/>
     <Cadastro/>
     </>
   )

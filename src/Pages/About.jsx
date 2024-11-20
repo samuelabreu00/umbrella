@@ -8,11 +8,9 @@ import { SaudeMente } from '../Screens/AboutScreen/SaudeMente/SaudeMente'
 export const About = () => {
   return (
     <>
-    <Header/>
     <Main/>
     <ComoSurgiu/>
     <SaudeMente/>
-    <Footer/>
     </>
   )
 }

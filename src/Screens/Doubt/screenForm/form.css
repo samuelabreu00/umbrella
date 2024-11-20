@@ -18,9 +18,12 @@ section.form form .box{
     flex-direction: column;
 }
 section.form form .box label{
-    margin: 1rem 0 .2rem ;
-    font-size: 22px;
+    margin:2rem 0 .2rem ;
+    font-size: 21px;
     color: #5e008e;
+}
+section.form form .box label.dia{
+    font-size: 18px;
 }
 section.form form .box input{
     outline: none;
@@ -29,4 +32,48 @@ section.form form .box input{
     border-right: none;
     margin-top: 10px;
     border-bottom: 1px solid rgba(122, 122, 122, 0.491);
+    font-size: 17px;
+}
+section.form form .box input[type="radio"],
+section.form form .box input[type="checkbox"]{
+    margin-right: 10px;
+}
+section.form form .box select{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.491);
+    font-size: 17px;
+    width: 100%;
+}
+section.form form .box textarea{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.491);
+    font-size: 17px;
+}
+section.form form input.button{
+    background-color: #5e008e;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .5rem 2rem;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+section.form form .buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+section.form form sup{
+    color: red;
 }

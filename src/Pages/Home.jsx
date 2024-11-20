@@ -8,11 +8,9 @@ import { Footer } from '../components/Footer/Footer'
 export const Home = () => {
   return (
     <>
-    <Header/>
     <Apresentação/>
     <Especialidades/>
     <Demandas/>
-    <Footer/>
     </>
   )
 }
