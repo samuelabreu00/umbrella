@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Form.css'
 
-export const Formulario = () => {
+export const Cadastro = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
