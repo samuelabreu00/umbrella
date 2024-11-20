@@ -84,7 +84,7 @@ section.saude .containerSaude .text p.ultimo{
 }
 @media (max-width:560px){
     section.saude img.absolut{
-        display: none;
+        display: block;
         width: 300px;
         bottom: 168px;
         right: 0;
