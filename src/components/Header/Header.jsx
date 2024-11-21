@@ -60,9 +60,9 @@ export const Header = () => {
   return (
     <header>
         <div className="container-header">
-            <Link to='/'> <img src={Logo} alt="Logo"/></Link>
+            <Link to='/' > <img src={Logo} alt="Logo"/></Link>
             <nav className='nav-menu'>
-                <ul>
+                <ul >
                     <li>
                       <NavLink 
                         to='/sobre' 

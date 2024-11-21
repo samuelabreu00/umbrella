@@ -9,9 +9,9 @@ export const Especialidades = () => {
     <>
     <section className="especialidades">
         <div className="containerEspecialidades">
-            <h1>Especialidades</h1>
+            <h1 data-aos="fade-up">Especialidades</h1>
 
-            <div className="itensEspecialidade">
+            <div className="itensEspecialidade" data-aos="fade-up">
                 <div className="content">
                     <div className="box">
                         <img src={iconPsicologia} alt="" />
@@ -21,7 +21,7 @@ export const Especialidades = () => {
                 </div>
                 
 
-                <div className="content">
+                <div className="content" >
                     <div className="box">
                         <img src={iconPsiquiatria} alt="" />
                         <h2>Psiquiatria</h2>
