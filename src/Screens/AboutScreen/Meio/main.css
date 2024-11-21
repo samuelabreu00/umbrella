@@ -1,5 +1,5 @@
 section.main{
-    min-height: 100vh;
+    height: auto;
   /* -webkit-box-shadow: 0px -15px 68px 78px rgba(120,48,161,1);
 -moz-box-shadow: 0px -15px 68px 78px rgba(120,48,161,1);
 box-shadow: 0px -15px 68px 78px rgba(120,48,161,1); */
@@ -32,7 +32,7 @@ section.main .containerMain{
     max-width: 1350px;
     margin: 0 auto;
     box-sizing: content-box;
-    padding: 5rem 24px;
+    padding: 3rem 24px;
 }
 section.main .containerMain .flex{
     display: flex;

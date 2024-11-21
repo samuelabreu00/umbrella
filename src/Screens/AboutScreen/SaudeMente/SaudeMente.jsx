@@ -9,7 +9,7 @@ export const SaudeMente = () => {
     <section className="saude">
       <img src={imgHomem} alt="" className='absolut'/>
       <h1 className='absolut'>SAÚDE ALÉM DA MENTE</h1>
-        <div className="containerSaude">
+        <div className="containerSaude"data-aos="fade-up">
             <div className="text">
                 <h1>Saúde além da mente.</h1>
                 <p>A <span>umbrella</span> tem o algo a mais que você sempre quis, com a <span>umbrella nutri</span> você vai poder ser sua melhor versão.</p>
