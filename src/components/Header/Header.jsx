@@ -107,9 +107,12 @@ export const Header = () => {
                         Umbrella Club
                       </NavLink>
                     </li>
-                    <ButtonAgendarWhite name='Agendar minha consulta' />
+                    <div className="btnSim"> <ButtonAgendarWhite name='Agendar minha consulta' /></div>
+                   
                 </ul>
             </nav>
+            <div className="btnNao"><ButtonAgendarWhite name='Agendar minha consulta' /></div>
+            
             <div className="container-hamburguer">
               <div className="hamburguer">
                 <span className="bar"></span>

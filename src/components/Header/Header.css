@@ -49,6 +49,9 @@ header .container-header nav ul span{
     height: 20px;
     background-color: #fff;
 }
+.btnSim{
+    display: none;
+}
 
 .container-hamburguer{
    display: none;
@@ -66,6 +69,12 @@ header .container-header nav ul span{
     border-radius: 6px;
 }
 @media (max-width:1250px) {
+    .btnSim{
+        display: block;
+    }
+    .btnNao{
+        display: none;
+    }
     header .container-header nav{
         position: fixed;
         right: 0;
