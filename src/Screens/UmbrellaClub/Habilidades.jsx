@@ -12,7 +12,7 @@ export const Habilidades = () => {
                 <h2><span>Melhore sua performance</span> e seja sua melhor versão com saúde física e mental de alto nível</h2>
             </div>
             <p data-aos="fade-up">Mentorias individuais, cursos e novos hábitos</p>
-            <ButtonAgendarWhite name="Quero melhorar minahs habilidades"/>
+            <ButtonAgendarWhite name="Quero melhorar minhas habilidades"/>
         </div>
         
     </div>
