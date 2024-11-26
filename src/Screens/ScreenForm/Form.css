@@ -5,6 +5,7 @@ section.form{
     align-items: center;
     padding: 24px;
     position: relative;
+    background-color: #7830a1;
 }
 section.form form{
     max-width: 650px;

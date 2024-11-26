@@ -1,8 +1,13 @@
+section.demandas{
+    background-color: #7830a1;
+}
+
 section.demandas .containerDemandas{
     max-width: 1350px;
     box-sizing: content-box;
     margin: 0 auto;
     padding: 3rem 24px;
+
 
     display: flex;
     flex-direction: column;

@@ -4,6 +4,7 @@ section.saude{
     background-repeat: no-repeat;
     position: relative;
     min-height: 100vh;
+    background-color: #7830a1;
 }
 section.saude img.absolut{
     display: none;
