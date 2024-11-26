@@ -94,8 +94,7 @@ section.apresentacao .containerApresentacao img.block{
         min-height: 100vh;
         height: auto;
         align-items: start;
-    }
-    section.apresentacao .containerApresentacao{
+
         padding-top: 5rem;
         flex-direction: column;
         justify-content: space-between;

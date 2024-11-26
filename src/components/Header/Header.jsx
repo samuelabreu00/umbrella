@@ -2,9 +2,14 @@ import React, { useEffect } from 'react'
 import './Header.css'
 import Logo from "../../assets/logoHeader.png"
 import { ButtonAgendarWhite } from '../ButtonAgendarWhite/ButtonAgendarWhite'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation} from 'react-router-dom'
 
 export const Header = () => {
+  
+  
+  const location = useLocation();
+
+  const isUmbrellaClubPage = location.pathname === '/club';
 
   useEffect(() => {
     const hamburguer = document.querySelector(".hamburguer");
@@ -58,7 +63,7 @@ export const Header = () => {
   };
 
   return (
-    <header>
+    <header className={`header ${isUmbrellaClubPage ? 'transparent' : ''}`}>
         <div className="container-header">
             <Link to='/' > <img src={Logo} alt="Logo"/></Link>
             <nav className='nav-menu'>
@@ -102,7 +107,7 @@ export const Header = () => {
                         Umbrella Club
                       </NavLink>
                     </li>
-                    <ButtonAgendarWhite />
+                    <ButtonAgendarWhite name='Agendar minha consulta' />
                 </ul>
             </nav>
             <div className="container-hamburguer">

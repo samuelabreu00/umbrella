@@ -14,7 +14,7 @@ export const SaudeMente = () => {
                 <h1>Saúde além da mente.</h1>
                 <p>A <span>umbrella</span> tem o algo a mais que você sempre quis, com a <span>umbrella nutri</span> você vai poder ser sua melhor versão.</p>
                 <p className='ultimo'>- Personalize sua dieta; <br /> - Tenha acompanhamento no seus treinos; <br /> - Dicas de saúde para uma vida saudável e muito mais.</p>
-                <ButtonAgendarWhite/>
+                <ButtonAgendarWhite name='Agendar minha consulta' />
             </div>
         </div>
     </section>

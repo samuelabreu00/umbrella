@@ -8,9 +8,9 @@ export const Apresentação = () => {
     <>
         <section className="apresentacao">
            
-            <div className="containerApresentacao">
-            <img src={imgComplemento} alt="" className='absolut' data-aos="fade-up"/>
-                <div className="boxText" data-aos="fade-up">
+            <div className="containerApresentacao" data-aos="fade-up">
+            <img src={imgComplemento} alt="" className='absolut'/>
+                <div className="boxText" >
                     <div className="titles">
                         <h1 >Saúde Mental <br /> Protegida</h1>
                         <h2>Sua vida em constante evolução.</h2>

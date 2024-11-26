@@ -22,7 +22,7 @@ export const Demandas = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
-                    <ButtonAgendarWhite/>
+                      <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
                 <img src={imgRelacionamentos} alt="" data-aos="fade-up"/>
             </div>
@@ -35,7 +35,7 @@ export const Demandas = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
-                    <ButtonAgendarWhite/>
+                      <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
             </div>
 
@@ -45,7 +45,7 @@ export const Demandas = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
-                    <ButtonAgendarWhite/>
+                      <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
                 <img src={imgAnsiedade} alt="" data-aos="fade-up"/>
             </div>
@@ -57,7 +57,7 @@ export const Demandas = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
-                    <ButtonAgendarWhite/>
+                      <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
                
             </div>
@@ -68,7 +68,7 @@ export const Demandas = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
-                    <ButtonAgendarWhite/>
+                      <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
                 <img src={imgBurnout} alt="" data-aos="fade-up"/>
             </div>
@@ -80,7 +80,7 @@ export const Demandas = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam error eligendi necessitatibus cupiditate illo maxime <br /> provident corporis dolores, tenetur doloremque officia repellendus quaerat nostrum eos quisquam officiis quidem saepe.</p>
-                    <ButtonAgendarWhite/>
+                      <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
                 
             </div>

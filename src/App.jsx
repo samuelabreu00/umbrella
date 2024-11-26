@@ -1,7 +1,8 @@
+
 import { About } from "./Pages/About"
 import  {Doubt}  from "./Pages/Doubt"
 import { Home } from "./Pages/Home"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes} from "react-router-dom"
 import { Services } from "./Pages/Services"
 import { UmbrellaClub } from "./Pages/UmbrellaClub"
 import { Footer } from "./components/Footer/Footer"
@@ -9,6 +10,8 @@ import { Header } from "./components/Header/Header"
 
 
 function App() {
+
+
   return (
     <>
     <BrowserRouter>

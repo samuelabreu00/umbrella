@@ -1,0 +1,76 @@
+
+section.habilidades{
+    background-image: url(../../assets/fundoClub.png);
+    width: 100%;
+    min-height: 100vh ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+}
+section.habilidades .containerHabilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 87vh;
+
+    max-width: 1350px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0 24px;
+}
+section.habilidades .containerHabilidades .boxTitles{
+    width: 48%;
+}
+section.habilidades .containerHabilidades .boxTitles .titles h1{
+    font-size: 82px;
+    line-height: 80px;
+    color: #eccaff;
+}
+section.habilidades .containerHabilidades .boxTitles .titles h2{
+    font-size: 27px;
+    color: #f6e8fe;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+section.habilidades .containerHabilidades .boxTitles .titles h2 span{
+    font-weight: bold;
+}
+section.habilidades .containerHabilidades .boxTitles p{
+    color: #f6e8fe;
+    margin: 15px 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+@media (max-width:980px) {
+    section.habilidades .containerHabilidades .boxTitles .titles h1{
+        font-size: 67px;
+        line-height: 70px;
+    }
+    section.habilidades .containerHabilidades .boxTitles{
+        width: 70%;
+    }
+    section.habilidades .containerHabilidades .boxTitles .titles h2{
+        font-size: 26px;
+    }
+}
+@media (max-width:520px){
+    section.habilidades .containerHabilidades .boxTitles .titles h1{
+        font-size: 55px;
+        line-height: 49px;
+    }
+    section.habilidades .containerHabilidades .boxTitles .titles h2{
+        font-size: 17px;
+    }
+    section.habilidades{
+        background-image: url(../../assets/imgAlternative.png);
+     }
+}
+@media (max-width:429px){
+    section.habilidades .containerHabilidades .boxTitles .titles h1{
+        font-size: 42px;
+        line-height: 49px;
+    }
+  
+}
