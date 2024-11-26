@@ -11,7 +11,7 @@ box-shadow: 0px -20px 29px 10px rgba(255,255,255,1);
 section.aulas .containerAulas{
     max-width: 1350px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 2rem 24px;
     box-sizing: content-box;
 
     display: flex;

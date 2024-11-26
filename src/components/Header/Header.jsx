@@ -63,11 +63,11 @@ export const Header = () => {
   };
 
   return (
-    <header className={`header ${isUmbrellaClubPage ? 'transparent' : ''}`}>
+    <header className={`header ${isUmbrellaClubPage ? 'transparent' : ''}`} >
         <div className="container-header">
-            <Link to='/' > <img src={Logo} alt="Logo"/></Link>
+            <Link to='/' data-aos="fade-up"> <img src={Logo} alt="Logo"/></Link>
             <nav className='nav-menu'>
-                <ul >
+                <ul data-aos="fade-up" >
                     <li>
                       <NavLink 
                         to='/sobre' 

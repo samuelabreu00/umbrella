@@ -6,7 +6,7 @@ export const Estrategia = () => {
   return (
     <>
     <section className="servicos">
-        <div className="containerServicos">
+        <div className="containerServicos" data-aos="fade-up">
           <img className="absolut" src={imgAbsolut} alt="" />
             <div className="text">
                 <div className="titles">

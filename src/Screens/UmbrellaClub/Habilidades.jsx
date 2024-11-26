@@ -7,11 +7,11 @@ export const Habilidades = () => {
    <section className="habilidades">
     <div className="containerHabilidades">
         <div className="boxTitles">
-            <div className="titles">
+            <div className="titles" data-aos="fade-up">
                 <h1>Torne-se indispensável e melhore suas habilidades</h1>
                 <h2><span>Melhore sua performance</span> e seja sua melhor versão com saúde física e mental de alto nível</h2>
             </div>
-            <p>Mentorias individuais, cursos e novos hábitos</p>
+            <p data-aos="fade-up">Mentorias individuais, cursos e novos hábitos</p>
             <ButtonAgendarWhite name="Quero melhorar minahs habilidades"/>
         </div>
         

@@ -9,12 +9,12 @@ export const Trabalhadores = () => {
     <section className="trabalhadores">
         <div className="containerTrabalhadores">
          
-            <div className="titles">
+            <div className="titles" data-aos="fade-up">
                 <h1>Cerca de <span>15% dos trabalhadores</span> adultos no mundo sofrem de transtornos mentais.</h1>
                 <h2>Identifique esses desafios na sua empresa e aumente sua performance</h2>
             </div>
 
-            <div className="transtornos">
+            <div className="transtornos" data-aos="fade-up">
                 <div className="flex">
                     <div className="box">
                         <div className='wrap'>
@@ -32,19 +32,19 @@ export const Trabalhadores = () => {
 
             <ButtonReuniao/>
 
-            <div className="titles">
+            <div className="titles" data-aos="fade-up">
                 <h1>O que vamos oferecer para <span> aumentar a performance</span> da sua empresa</h1>
             </div>
 
             <div className="cards">
-                <div className="card1 card">Ambiente saudável entre os colaboradores</div>
-                <div className="card2 card">Eletrônica operacional e resultados palpáveis de sua equipe</div>
-                <div className="card3 card">Colaboradores mais engajados com a cultura da empresa</div>
-                <div className="card4 card">Entrega de demandas com eficácia</div>
-                <div className="card5 card">Resultados financeiros palpáveis com o avanço da sua equipe</div>
+                <div className="card1 card" data-aos="fade-up">Ambiente saudável entre os colaboradores</div>
+                <div className="card2 card" data-aos="fade-up">Eletrônica operacional e resultados palpáveis de sua equipe</div>
+                <div className="card3 card" data-aos="fade-up">Colaboradores mais engajados com a cultura da empresa</div>
+                <div className="card4 card" data-aos="fade-up">Entrega de demandas com eficácia</div>
+                <div className="card5 card" data-aos="fade-up">Resultados financeiros palpáveis com o avanço da sua equipe</div>
             </div>
 
-            <div className="containerForm">
+            <div className="containerForm" data-aos="fade-up">
                 <form action="">
                     <div className="box">
                         <label htmlFor="">Nome Completo</label>
