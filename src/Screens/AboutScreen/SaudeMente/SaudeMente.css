@@ -1,14 +1,18 @@
 section.saude{
     background-image: url(../../../assets/fundoImgSaude.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     min-height: 100vh;
     background-color: #7830a1;
+    width: 100%;
 }
 section.saude img.absolut{
-    display: none;
+    display: block;
     position: absolute;
+    width: 60%;
+    bottom: 0;
+ 
 }
 section.saude h1.absolut{
     position: absolute;
@@ -29,7 +33,8 @@ section.saude .containerSaude{
     padding: 0 24px;
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: end;
+    min-height: 80vh;
 }
 section.saude .containerSaude .text{
     padding-top: 2rem;
@@ -66,7 +71,7 @@ section.saude .containerSaude .text p.ultimo{
 }
 @media (max-width:777px){
     section.saude{
-        background-image: url(../../../assets/fundoSaudeMobile.png);
+        /* background-image: url(../../../assets/fundoSaudeMobile.png); */
     }
     section.saude .containerSaude{
         justify-content: flex-start;
@@ -77,19 +82,16 @@ section.saude .containerSaude .text p.ultimo{
     }
    
     section.saude img.absolut{
-        display: block;
-        width: 400px;
-        bottom: 165px;
-        right: 0;
+        /* display: block; */
+      right: 0 !important;
+        bottom: 0 ;
+        
     }
 }
 @media (max-width:560px){
     section.saude img.absolut{
         display: block;
-        width: 300px;
-        bottom: 168px;
-        right: 0;
-        opacity: 1;
+        width: 400px;
     }
     section.saude .containerSaude .text{
         width: 100%;

@@ -1,7 +1,7 @@
 import React from 'react'
 import './SaudeMente.css'
 import {ButtonAgendarWhite} from '../../../components/ButtonAgendarWhite/ButtonAgendarWhite'
-import imgHomem from '../../../assets/Camada 4.png'
+import imgHomem from '../../../assets/absolut.png'
 
 export const SaudeMente = () => {
   return (

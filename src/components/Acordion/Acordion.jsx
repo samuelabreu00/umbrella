@@ -1,26 +1,21 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import './Acordion.css';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
-function Acordion({ titulo, texto }) {
-  const [showText, setShowText] = useState(false);
-  const answerRef = useRef(null);
-
-  const toggleText = () => {
-    setShowText((prevShowText) => !prevShowText);
-  };
-
+function Acordion({ titulo, texto, isActive, onClick }) {
   return (
-    <div className={`question-answer ${showText ? 'show-text' : ''}`}>
+    <div className={`question-answer ${isActive ? 'show-text' : ''}`}>
       <div className="question">
         <h2 className="title-question">{titulo}</h2>
-        <button className="question-btn" onClick={toggleText}>
-          {showText ? <FaChevronUp /> : <FaChevronDown />}
+        <button className="question-btn" onClick={onClick}>
+          {isActive ? <FaChevronUp /> : <FaChevronDown />}
         </button>
       </div>
-      <div ref={answerRef} className="answer">
-        <p>{texto}</p>
-      </div>
+      {isActive && (
+        <div className="answer">
+          <p>{texto}</p>
+        </div>
+      )}
     </div>
   );
 }
