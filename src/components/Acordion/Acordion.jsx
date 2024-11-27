@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './acordion.css';
+import './Acordion.css';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
 function Acordion({ titulo, texto }) {
