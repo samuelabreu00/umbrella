@@ -68,6 +68,9 @@ section.saude .containerSaude .text p.ultimo{
         width: 100%;
         padding: 0 24px;
     }
+    section.saude .containerSaude{
+        align-items: center;
+    }
 }
 @media (max-width:777px){
     section.saude{
