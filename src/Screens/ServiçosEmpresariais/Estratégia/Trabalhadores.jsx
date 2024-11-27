@@ -3,7 +3,7 @@ import imgLogo from '../../../assets/logoHeader.png'
 import './Trabalhadores.css'
 import { ButtonReuniao } from '../../../components/ButtonReuniao/ButtonReuniao'
 import imgTrabalhadores from '../../../assets/imgTrabalhadorew.png'
-import Acordion from '../Acordion/Acordion'
+import Acordion from './Acordion/Acordion'
 
 
 export const Trabalhadores = () => {
