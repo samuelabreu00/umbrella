@@ -5,13 +5,13 @@ import { ButtonAgendarBlack } from '../../components/ButtonAgendarBlack/ButtonAg
 export const Habilidades = () => {
   return (
    <section className="habilidades">
-    <div className="containerHabilidades">
+    <div className="containerHabilidades" data-aos="fade-up">
         <div className="boxTitles">
-            <div className="titles" data-aos="fade-up">
+            <div className="titles">
                 <h1>Torne-se indispensável e melhore suas habilidades</h1>
                 <h2><span>Melhore sua performance</span> e seja sua melhor versão com saúde física e mental de alto nível</h2>
             </div>
-            <p data-aos="fade-up">Mentorias individuais, cursos e novos hábitos</p>
+            <p>Mentorias individuais, cursos e novos hábitos</p>
             <ButtonAgendarBlack name="Quero melhorar minhas habilidades"/>
         </div>
         
