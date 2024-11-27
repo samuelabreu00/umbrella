@@ -15,8 +15,8 @@ export const Main = () => {
                 <div className="boxTitle" data-aos="fade-up">
                     <h1>O que é a <span>Umbrella</span></h1>
                     <div className="text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima natus accusamus quia? Molestias sit voluptatum aliquam cupiditate. Eos quidem debitis ex adipisci voluptas, nihil architecto recusandae earum doloribus enim vitae!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas incidunt, accusantium tempora necessitatibus ut quod eos perspiciatis sit! Impedit sit quasi officiis alias dolor error corrupti totam quod suscipit expedita.
+                        <p>Ecossistema de saúde mental para pessoas e negócios que buscam atendimento para melhorar suas habilidades emocionais, sociais e empresariais, transformando o bem-estar psicológico em um diferencial para o avanço e equilíbrio de suas vidas e organizações. <br />
+                   
                         </p>
                     </div>
                 </div>

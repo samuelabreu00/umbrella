@@ -37,7 +37,7 @@ section.especialidades .containerEspecialidades .itensEspecialidade{
 }
 section.especialidades .containerEspecialidades .itensEspecialidade .content{
     border-radius: 10px;
-    width: 300px;
+    width: 380px;
     height: auto;
     display: flex;
     flex-direction: column;

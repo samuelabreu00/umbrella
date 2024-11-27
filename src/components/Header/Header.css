@@ -1,5 +1,5 @@
 header{
-    background-color: #7830a1;
+    background-color: #240028;
     transition: background-color 0.3s ease;
 }
 header.transparent {
@@ -79,7 +79,7 @@ header .container-header nav ul span{
         position: fixed;
         right: 0;
         top: 155px;
-        background-color: #7830a1;
+        background-color: #240028;
         z-index: 999;
         padding: 1rem;
         border-radius: 20px 0 0 20px;

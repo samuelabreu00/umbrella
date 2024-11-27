@@ -17,7 +17,8 @@ export const Especialidades = () => {
                         <img src={iconPsicologia} alt="" />
                         <h2>Psicologia</h2>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ratione amet placeat omnis. Rerum officia necessitatibus ducimus quia velit doloremque quisquam neque, corporis sequi, distinctio adipisci corrupti expedita, reprehenderit dolorem.</p>
+                    <p>Nossos psicólogos são qualificados tanto para o tratamento de transtornos específicos, como também para atender pessoas que buscam ajuda na compreensão e no enfrentamento de questões emocionais, comportamentais e relacionais. 
+                    </p>
                 </div>
                 
 
@@ -26,7 +27,7 @@ export const Especialidades = () => {
                         <img src={iconPsiquiatria} alt="" />
                         <h2>Psiquiatria</h2>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ratione amet placeat omnis. Rerum officia necessitatibus ducimus quia velit doloremque quisquam neque, corporis sequi, distinctio adipisci corrupti expedita, reprehenderit dolorem.</p>
+                    <p>A psiquiatria é uma área médica voltada para o diagnóstico, tratamento e prevenção de transtornos mentais. Os médicos psiquiatras avaliam aspectos biológicos, psicológicos e sociais das condições, podendo prescrever medicamentos e indicar outros tratamentos, como a psicoterapia.</p>
                 </div>
 
                 <div className="content">
@@ -34,7 +35,7 @@ export const Especialidades = () => {
                         <img src={iconNutrição} alt="" />
                         <h2>Nutrição</h2>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ratione amet placeat omnis. Rerum officia necessitatibus ducimus quia velit doloremque quisquam neque, corporis sequi, distinctio adipisci corrupti expedita, reprehenderit dolorem.</p>
+                    <p>O nutricionista da Umbrella é responsável por orientar hábitos alimentares, considerando as necessidades individuais. Os nutrientes adequados são fundamentais para o bom funcionamento do cérebro, regulando os neurotransmissores como serotonina e dopamina, que impactam o humor e o comportamento, assim como, questões psicológicas podem afetar os hábitos alimentares, ou seja, a relação entre nutrição e psicologia permite uma abordagem mais completa.</p>
                 </div>
             </div>
         </div>
