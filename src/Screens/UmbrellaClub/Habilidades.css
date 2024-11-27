@@ -6,6 +6,7 @@ section.habilidades{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    
 
 }
 section.habilidades .containerHabilidades{
@@ -26,7 +27,7 @@ section.habilidades .containerHabilidades .boxTitles{
 section.habilidades .containerHabilidades .boxTitles .titles h1{
     font-size: 82px;
     line-height: 80px;
-    color: #eccaff;
+    color: #f6e8fe;
 }
 section.habilidades .containerHabilidades .boxTitles .titles h2{
     font-size: 27px;
@@ -38,10 +39,11 @@ section.habilidades .containerHabilidades .boxTitles .titles h2 span{
     font-weight: bold;
 }
 section.habilidades .containerHabilidades .boxTitles p{
-    color: #f6e8fe;
+    color: #eccaff;
     margin: 15px 0;
     font-size: 19px;
     font-weight: bold;
+
 }
 @media (max-width:980px) {
     section.habilidades .containerHabilidades .boxTitles .titles h1{
@@ -55,10 +57,10 @@ section.habilidades .containerHabilidades .boxTitles p{
         font-size: 26px;
     }
 }
-@media (max-width:520px){
+@media (max-width:550px){
     section.habilidades .containerHabilidades .boxTitles .titles h1{
         font-size: 55px;
-        line-height: 49px;
+        line-height: 55px;
         color: #fff;
     }
     section.habilidades .containerHabilidades .boxTitles .titles h2{
@@ -71,7 +73,7 @@ section.habilidades .containerHabilidades .boxTitles p{
 @media (max-width:429px){
     section.habilidades .containerHabilidades .boxTitles .titles h1{
         font-size: 42px;
-        line-height: 49px;
+        line-height: 45px;
     }
   
 }

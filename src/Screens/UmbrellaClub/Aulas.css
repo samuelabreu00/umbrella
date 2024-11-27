@@ -30,7 +30,7 @@ section.aulas .containerAulas .titles{
 section.aulas .containerAulas .titles h1{
     font-size: 45px;
     text-align: center;
-    color: #7830a1;
+    color: #000;
     width: 80%;
     font-weight: 600;  
 }
@@ -38,11 +38,11 @@ section.aulas .containerAulas p{
     font-size: 25px;
     width: 80%;
     margin:2rem 0;
-    color: #7830a1;
+    color: #444444;
     text-align: center;
 }
 section.aulas .containerAulas h2{
-    color: #7830a1;
+    color: #000;
     font-weight: bolder;
     display: flex;
     justify-content: center;

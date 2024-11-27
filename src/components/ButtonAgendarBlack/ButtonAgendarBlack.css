@@ -1,0 +1,14 @@
+
+a.buttonAgendarBlack{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    background-color: #000;
+    backdrop-filter: blur(70px);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #000000;
+}

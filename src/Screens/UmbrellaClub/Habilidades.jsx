@@ -1,6 +1,6 @@
 import React from 'react'
 import './Habilidades.css'
-import {ButtonAgendarWhite} from '../../components/ButtonAgendarWhite/ButtonAgendarWhite'
+import { ButtonAgendarBlack } from '../../components/ButtonAgendarBlack/ButtonAgendarBlack'
 
 export const Habilidades = () => {
   return (
@@ -12,7 +12,7 @@ export const Habilidades = () => {
                 <h2><span>Melhore sua performance</span> e seja sua melhor versão com saúde física e mental de alto nível</h2>
             </div>
             <p data-aos="fade-up">Mentorias individuais, cursos e novos hábitos</p>
-            <ButtonAgendarWhite name="Quero melhorar minhas habilidades"/>
+            <ButtonAgendarBlack name="Quero melhorar minhas habilidades"/>
         </div>
         
     </div>
