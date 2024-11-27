@@ -106,7 +106,7 @@ export const Trabalhadores = () => {
           <h1>
             Se você quer transformar sua empresa e <span>desbloquear um novo nível de faturamento</span>, entre em contato
             agora. Vamos mostrar como a Umbrella Mental pode ser o ponto de virada no <span>sucesso do seu negócio</span>.
-            O <span>futuro da sua empresa</span> começa com uma decisão hoje!
+            
           </h1>
           <form action="">
             <div className="logo">
