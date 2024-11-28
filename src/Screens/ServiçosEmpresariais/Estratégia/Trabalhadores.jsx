@@ -3,6 +3,8 @@ import imgLogo from '../../../assets/logoHeader.png';
 import './Trabalhadores.css';
 import { ButtonReuniao } from '../../../components/ButtonReuniao/ButtonReuniao';
 import imgTrabalhadores from '../../../assets/imgTrabalhadorew.png';
+import imgEnquete1 from '../../../assets/enquete1.png'
+import imgEnquete2 from '../../../assets/enquete2.png'
 import Acordion from '../../../components/Acordion/Acordion';
 
 export const Trabalhadores = () => {
@@ -102,6 +104,26 @@ export const Trabalhadores = () => {
           </div>
         </div>
 
+       
+
+        <div className="containerFlexEnquete" data-aos="fade-up">
+          <div className="flexEnquete">
+              <img src={imgEnquete1} alt="" />
+              <div className="text">
+                <h1>Por que você não pode esperar?</h1>
+                <p>Saúde mental não é apenas um diferencial, é uma necessidade estratégica. Estudos revelam que problemas de saúde mental custam globalmente cerca de US$ 1 trilhão por ano em perda de produtividade (Organização Mundial da Saúde - OMS). <br /><br /> No Brasil, estima-se que 86% dos trabalhadores apresentem sinais de esgotamento mental, e empresas que investem em saúde mental e bem-estar observam um retorno de ate 500% no investimento, de acordo com dados do Fórum Econômico Mundial.</p>
+              </div>
+          </div>
+          <div className="flexEnquete">
+              <div className="text">
+                <h1>Além disso:</h1>
+                <p><li>Colaboradores desmotivados podem reduzir a produtividade em ate 33%.</li> <br /> <li>A rotatividade custa para uma empresa, em média, o equivalente de 6 a 9 meses de salário do colaborador perdido.</li>  <br /> <li>Empresas com equipes saudáveis e engajadas têm 21% mais lucratividade, segundo a Gallup.</li> <br /><span>Agora, pergunte a si mesmo: quanto você está perdendo ao ignorar a saúde mental e a performance da sua equipe</span></p>
+              </div>
+              <img src={imgEnquete2} alt="" />
+          </div>
+
+        </div>
+        
         <div className="containerForm" data-aos="fade-up">
           <h1>
             Se você quer transformar sua empresa e <span>desbloquear um novo nível de faturamento</span>, entre em contato

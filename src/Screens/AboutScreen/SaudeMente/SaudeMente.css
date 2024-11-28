@@ -6,6 +6,7 @@ section.saude{
     min-height: 100vh;
     background-color: #7830a1;
     width: 100%;
+    
 }
 section.saude img.absolut{
     display: block;
@@ -14,7 +15,7 @@ section.saude img.absolut{
     bottom: 0;
  
 }
-section.saude h1.absolut{
+/* section.saude h1.absolut{
     position: absolute;
     top: -160px;
     left: 50%;
@@ -25,7 +26,7 @@ section.saude h1.absolut{
   text-align: center; 
   font-weight: 800;
   display: inline;
-}
+} */
 section.saude .containerSaude{
     max-width: 1350px;
     box-sizing: content-box;
@@ -49,7 +50,7 @@ section.saude .containerSaude .text h1{
 section.saude .containerSaude .text p{
     color: #fff;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
 }
 section.saude .containerSaude .text p span{
     font-weight: bold;

@@ -1,19 +1,105 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal h2 {
+    margin-bottom: 10px;
+  }
+  
+  .modal p {
+    margin-bottom: 20px;
+  }
+  
+  .modal button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background: #0056b3;
+  }
+  
+
+
+
+
+
+
+
+
+
 section.form{
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 3rem;
     padding: 24px;
     position: relative;
     background-color: #7830a1;
+    max-width: 1350px;
+    margin: 0 auto;
+   
+}
+section.form .containerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.form .containerImg img{
+    width: 250px;
+}
+section.form .text{
+width: 100%;
+text-align: justify;
+}
+section.form .text h1{
+    font-size: 46px;
+    text-align: center;
+    color: #fff;
+}
+section.form .text h2{
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+section.form .text p{
+    color: #e5e5e5;
+    font-size: 17px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
 }
 section.form form{
-    max-width: 650px;
-    margin: 0 auto;
+    width: 100%;
     padding: 1rem 2rem;
     box-sizing: content-box;
     background-color: #fff;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 section.form form .box{
     display: flex;
@@ -21,11 +107,11 @@ section.form form .box{
 }
 section.form form .box label{
     margin:2rem 0 .2rem ;
-    font-size: 21px;
+    font-size: 17px;
     color: #5e008e;
 }
 section.form form .box label.dia{
-    font-size: 18px;
+    font-size: 15px;
 }
 section.form form .box input{
     outline: none;
@@ -34,7 +120,7 @@ section.form form .box input{
     border-right: none;
     margin-top: 10px;
     border-bottom: 1px solid rgba(122, 122, 122, 0.491);
-    font-size: 17px;
+    font-size: 15px;
 }
 section.form form .box input[type="radio"],
 section.form form .box input[type="checkbox"]{
@@ -57,9 +143,10 @@ section.form form .box textarea{
     border-right: none;
     margin-top: 10px;
     border-bottom: 1px solid rgba(122, 122, 122, 0.491);
-    font-size: 17px;
+    font-size: 15px;
 }
-section.form form input.button{
+section.form form input.button,
+section.form form button{
     background-color: #5e008e;
     color: #fff;
     border: none;
@@ -70,9 +157,12 @@ section.form form input.button{
     cursor: pointer;
     font-weight: 600;
 }
+
+
 section.form form .buttonContainer{
     display: flex;
     justify-content: center;
+
     align-items: center;
     margin: 1rem 0;
 }
@@ -80,6 +170,52 @@ section.form form sup{
     color: red;
 }
 
+
+
+section.form .containerTela2 p{
+    font-size: 19px;
+    color: gray;
+}
+section.form .containerTela2 p span{
+    font-style: italic;
+}
+section.form .containerTela2 p span.bold{
+    font-weight: bold;
+}
+section.form .containerTela2 .check{
+    margin-top: 1rem;
+    color: gray;
+}
+section.form .containerTela2 .check label{
+    margin-left: 10px;
+}
+
+section.form .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+section.form .contentBoxForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.form .contentBoxForm h1{
+    text-align: center;
+    font-size: 36px;
+    color: #7830a1;
+}
+section.form .contentBoxForm .boxForm{
+    margin: 1rem 0;
+}
+section.form .contentBoxForm .boxForm .grupo{
+    margin: 10px 0;
+}
+section.form .contentBoxForm .boxForm .grupo label{
+    margin-left: 5px;
+    font-size: 20px;
+}
 /* Tela de carregamento */
 .loading-overlay {
     position: fixed;

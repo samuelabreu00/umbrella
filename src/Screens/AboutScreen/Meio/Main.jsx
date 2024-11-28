@@ -26,18 +26,18 @@ export const Main = () => {
             <div className="containerBox">
                 <div className="box1 box" data-aos="fade-up">
                     <img src={imgFlecha} alt="" />
-                    <h2>Missão</h2>
-                    <p>Promover o bem-estar psicológico e emocional oferecendo suporte terapêutico de excelência.</p>
+                    <h2>Propósito</h2>
+                    <p>Proporcionar proteção e evolução por meio da saúde mental, ajudando pessoas e empresas a alcançarem seu máximo potencial.</p>
                 </div>
                 <div className="box2 box" data-aos="fade-up">
                     <img src={imgOlho} alt="" />
                     <h2>Visão</h2>
-                    <p>Ser agentes de transformação de vidas ao expandir o acesso ao cuidado psicológico, contribuindo para uma sociedade mais consciente e saudável emocionalmente.</p>
+                    <p>Ser referência global em soluções de saúde mental, transformando vidas e negócios com equilíbrio, inovação e impacto duradouro.</p>
                 </div>
                 <div className="box3 box" data-aos="fade-up">
                     <img src={imgDiamante} alt="" />
                     <h2>Valores</h2>
-                    <p>Ética, crescimento, desenvolvimento e excelência.</p>
+                    <p><div><span>Proteção</span>: Garantimos segurança emocional. <br /><span>Evolução</span>: Promovemos desenvolvimento contínuo e consciente. <br /><span>Equilíbrio</span>: Alinhamos saúde mental e alto desempenho. <br /> <span>Transformação</span>: Geramos mudanças reais e rigorosas. <br /><span>Responsabilidade</span>: Compromisso com o impacto positivo.</div></p>
                 </div>
             </div>
         </div>
