@@ -68,7 +68,10 @@ export const Cadastro = () => {
 
   const sendEmail = (e) => {
     e.preventDefault(); // Evitar o envio automático do formulário
-    
+
+    // Imprimir para depuração
+    console.log(formData.diasAtendimento);
+  
     if (!formData.name || !formData.mensage || !formData.email || formData.diasAtendimento.length === 0) {
       toast.error('Por favor, preencha todos os campos obrigatórios.'); // Usando Toastify
       return;
@@ -124,11 +127,11 @@ export const Cadastro = () => {
   };
 
   const handleDiaChange = (e) => {
-    const { value } = e.target;
+    const { value, checked } = e.target;
     setFormData((prevState) => {
-      const newDias = prevState.diasAtendimento.includes(value)
-        ? prevState.diasAtendimento.filter(dia => dia !== value)
-        : [...prevState.diasAtendimento, value];
+      const newDias = checked
+        ? [...prevState.diasAtendimento, value] // Adiciona o dia se estiver marcado
+        : prevState.diasAtendimento.filter(dia => dia !== value); // Remove o dia se não estiver marcado
       return { ...prevState, diasAtendimento: newDias };
     });
   };
@@ -163,7 +166,6 @@ export const Cadastro = () => {
           )}
           {step === 3 && (
             <>
-              <h2>Pronto para enviar?</h2>
               <p>Revise os dados preenchidos e clique em "Enviar" para completar o seu cadastro.</p>
             </>
           )}
@@ -215,22 +217,85 @@ export const Cadastro = () => {
 
                 <div className="box">
   <label>Qual o melhor dia para atendimento? (marque todas as alternativas aplicáveis)<sup>*</sup></label>
-  {['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Todos os dias'].map((dia, index) => (
-    <div key={index} className="grupo">
-      <input
-        type="checkbox"
-        id={`check_${index}`}
-        name="dia"
-        value={dia}
-        checked={formData.diasAtendimento.includes(dia)}
-        onChange={handleDiaChange}
-      />
-      <label htmlFor={`check_${index}`} className='dia'>{dia}</label>
-    </div>
-  ))}
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_segunda"
+      name="dia"
+      value="Segunda-feira"
+      checked={formData.diasAtendimento.includes('Segunda-feira')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_segunda" className='dia'>Segunda-feira</label>
+  </div>
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_terca"
+      name="dia"
+      value="Terça-feira"
+      checked={formData.diasAtendimento.includes('Terça-feira')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_terca" className='dia'>Terça-feira</label>
+  </div>
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_quarta"
+      name="dia"
+      value="Quarta-feira"
+      checked={formData.diasAtendimento.includes('Quarta-feira')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_quarta" className='dia'>Quarta-feira</label>
+  </div>
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_quinta"
+      name="dia"
+      value="Quinta-feira"
+      checked={formData.diasAtendimento.includes('Quinta-feira')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_quinta" className='dia'>Quinta-feira</label>
+  </div>
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_sexta"
+      name="dia"
+      value="Sexta-feira"
+      checked={formData.diasAtendimento.includes('Sexta-feira')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_sexta" className='dia'>Sexta-feira</label>
+  </div>
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_sabado"
+      name="dia"
+      value="Sábado"
+      checked={formData.diasAtendimento.includes('Sábado')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_sabado" className='dia'>Sábado</label>
+  </div>
+  <div className="grupo">
+    <input
+      type="checkbox"
+      id="check_todos"
+      name="dia"
+      value="Todos os dias"
+      checked={formData.diasAtendimento.includes('Todos os dias')}
+      onChange={handleDiaChange}
+    />
+    <label htmlFor="check_todos" className='dia'>Todos os dias</label>
+  </div>
 </div>
-
-              </div>
+</div>
 
 
 
