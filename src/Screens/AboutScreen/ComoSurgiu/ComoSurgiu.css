@@ -6,6 +6,8 @@ section.surgiu{
     position: relative;
     padding: 8rem 0 ;
     background-color: #7830a1;
+    box-shadow: -3px 20px 10px 5px #7830a1;
+    z-index: 10;
 }
 section.surgiu img.absolut{
     position: absolute;

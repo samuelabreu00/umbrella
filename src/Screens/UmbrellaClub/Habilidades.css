@@ -6,9 +6,9 @@ section.habilidades{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    
-
+    position: relative;
 }
+
 section.habilidades .containerHabilidades{
     display: flex;
     flex-direction: column;

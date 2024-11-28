@@ -9,8 +9,11 @@ import Acordion from '../../../components/Acordion/Acordion';
 import emailjs from 'emailjs-com'; // Importando o EmailJS
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 export const Trabalhadores = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [loading, setLoading] = useState(false); // 
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -46,8 +49,8 @@ export const Trabalhadores = () => {
       [name]: value,
     }));
   };
-
   const sendEmail = (e) => {
+    setLoading(true); // Ativa a tela de carregamento
     e.preventDefault();
   
     // Verificando se todos os campos estão preenchidos
@@ -64,6 +67,7 @@ export const Trabalhadores = () => {
         position: 'top-right',
         autoClose: 5000,
       });
+      setLoading(false); //
       return;
     }
   
@@ -89,12 +93,24 @@ export const Trabalhadores = () => {
             position: 'top-right',
             autoClose: 5000,
           });
+  
+          // Zera os campos do formulário
+          setFormData({
+            nome: '',
+            email: '',
+            whatsapp: '',
+            cargo: '',
+            empresa: '',
+            numFuncionarios: '',
+          });
+          setLoading(false); // Desativa a tela de carregamento
         },
         (error) => {
           toast.error('Erro ao enviar o formulário. Tente novamente!', {
             position: 'top-right',
             autoClose: 5000,
           });
+          setLoading(false); // Desativa a tela de carregamento
         }
       );
   };
@@ -120,6 +136,12 @@ export const Trabalhadores = () => {
 
   return (
     <section className="trabalhadores" ref={containerRef}>
+         {loading && ( // Tela de carregamento
+        <div className="loading-overlay">
+          <div className="spinner"></div>
+          <p>Enviando...</p>
+        </div>
+      )}
       <div className="containerTrabalhadores">
         <div className="titles" data-aos="fade-up">
           <h1>

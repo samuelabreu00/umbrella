@@ -167,7 +167,7 @@ export const Cadastro = () => {
       telefone: '',
       cpf: '',
       email: '',
-      horario: 'manhã',
+      horario: '',
       diasAtendimento: [],
       investimento: [],
     });
@@ -263,7 +263,7 @@ export const Cadastro = () => {
                 <div className="box">
                   <label>Qual turno você teria disponibilidade para o atendimento?<sup>*</sup></label>
                   <div className="grupo">
-                    <input type="radio" id="radio_manha" name="horario" value="manhã" defaultChecked  checked={formData.horario === 'manhã'}
+                    <input type="radio" id="radio_manha" name="horario" value="manhã" checked={formData.horario === 'manhã'}
               onChange={handleChange}/>
                     <label htmlFor="radio_manha" className='dia'>Manhã</label>
                   </div>
