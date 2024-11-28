@@ -60,7 +60,7 @@ export const Cadastro = () => {
     telefone: '',
     cpf: '',
     email: '',
-    horario: 'manhã',
+    horario: '',
     diasAtendimento: [],
     investimento: [],
   });
