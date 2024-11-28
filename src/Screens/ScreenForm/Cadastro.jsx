@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import logoRoxa from '../../assets/logoRoxo.png';
@@ -7,10 +8,13 @@ import './Form.css';
 import 'react-toastify/dist/ReactToastify.css'; // Importa o estilo
 
 export const Cadastro = () => {
+  
   const form = useRef();
   const [paises, setPaises] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false); 
   const [step, setStep] = useState(1);
+  const navigate = useNavigate();
 
   const isFormValid = () => {
     const formData = new FormData(form.current);
@@ -26,6 +30,9 @@ export const Cadastro = () => {
     
     return name && birthdate && message && country && city && phone && cpf && email && horario;
   };
+
+
+
 
   useEffect(() => {
     const fetchPaises = async () => {
@@ -66,6 +73,8 @@ export const Cadastro = () => {
     }));
   };
 
+
+  
   const sendEmail = (e) => {
     e.preventDefault(); // Evitar o envio automático do formulário
 
@@ -90,6 +99,7 @@ export const Cadastro = () => {
         () => {
           setLoading(false);
           toast.success('Dados enviados com sucesso!'); // Usando Toastify
+          setShowModal(true); // Exibir o modal de agradecimento
           setStep(1);
         },
         (error) => {
@@ -146,6 +156,45 @@ export const Cadastro = () => {
     }));
   };
 
+  const handleModalClose = () => {
+    setShowModal(false); // Fechar o modal
+    setFormData({ // Limpar os campos do formulário
+      name: '',
+      birthdate: '',
+      mensage: '',
+      moradia_pais: '',
+      moradia_cidade: '',
+      telefone: '',
+      cpf: '',
+      email: '',
+      horario: 'manhã',
+      diasAtendimento: [],
+      investimento: [],
+    });
+    navigate('/');
+  };
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'Escape' && showModal) {
+        handleModalClose();
+        
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [showModal]); // Dependência para monitorar o estado do modal
+
+  // Fechar o modal ao clicar fora da tela
+  const handleBackdropClick = (e) => {
+    if (e.target.className === 'modal') {
+      handleModalClose();
+    }
+  };
+
   return (
     <>
       <section className="form">
@@ -155,7 +204,7 @@ export const Cadastro = () => {
           {step === 1 && (
             <>
               <h2>Está buscando por um atendimento de excelência em psicologia?</h2>
-              <p>Preencha o formulário abaixo, temos uma equipe técnica formada por profissionais especializados, éticos e experientes. <br /> Encaminharemos você para o profissional que se adeque melhor ao atendimento e acompanhamento da sua demanda.</p>
+              <p>Preencha o formulário abaixo, temos uma equipe técnica formada por profissionais especializados, éticos e experientes. Encaminharemos você para o profissional que se adeque melhor ao atendimento e acompanhamento da sua demanda.</p>
             </>
           )}
           {step === 2 && (
@@ -433,9 +482,21 @@ Eles serão armazenados de maneira segura e criptografada, com acesso restrito a
           )}
 
         
-</div>
+        </div>
           
         </form>
+        {showModal && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2>Obrigado por buscar proteger sua mente na umbrella mental.</h2>
+            
+              <p>Nosso time entrará em contato com você em breve.</p>
+              <button onClick={handleModalClose}>Fechar</button>
+            </div>
+          </div>
+        )}
+        
+
       </section>
 
            {/* Tela de carregamento */}

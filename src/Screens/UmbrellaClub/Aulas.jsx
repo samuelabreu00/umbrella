@@ -11,7 +11,7 @@ export const Aulas = () => {
             </div>
 
             
-            <h2 data-aos="fade-up">Confira nossas aulas semanais</h2>
+            <h2 data-aos="fade-up">Confira nossas aulas semanais em breve</h2>
         </div>
     </section>
   )

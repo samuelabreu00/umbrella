@@ -3,12 +3,23 @@ import imgLogo from '../../../assets/logoHeader.png';
 import './Trabalhadores.css';
 import { ButtonReuniao } from '../../../components/ButtonReuniao/ButtonReuniao';
 import imgTrabalhadores from '../../../assets/imgTrabalhadorew.png';
-import imgEnquete1 from '../../../assets/enquete1.png'
-import imgEnquete2 from '../../../assets/enquete2.png'
+import imgEnquete1 from '../../../assets/enquete1.png';
+import imgEnquete2 from '../../../assets/enquete2.png';
 import Acordion from '../../../components/Acordion/Acordion';
-
+import emailjs from 'emailjs-com'; // Importando o EmailJS
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const Trabalhadores = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    whatsapp: '',
+    cargo: '',
+    empresa: '',
+    numFuncionarios: '',
+  });
+
   const containerRef = useRef(null);
 
   const toggleAcordion = (index) => {
@@ -27,6 +38,66 @@ export const Trabalhadores = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    // Verificando se todos os campos estão preenchidos
+    if (
+      !formData.nome ||
+      !formData.email ||
+      !formData.whatsapp ||
+      !formData.cargo ||
+      !formData.empresa ||
+      !formData.numFuncionarios
+    ) {
+      // Exibindo a mensagem de erro caso algum campo esteja vazio
+      toast.error('Por favor, preencha todos os campos antes de enviar!', {
+        position: 'top-right',
+        autoClose: 5000,
+      });
+      return;
+    }
+  
+    const templateParams = {
+      nome: formData.nome,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      cargo: formData.cargo,
+      empresa: formData.empresa,
+      numFuncionarios: formData.numFuncionarios,
+    };
+  
+    emailjs
+      .send(
+        'gmailMensage',
+        'template_xv7vnpe',
+        templateParams,
+        'hnKo67_lMLCletrBg'
+      )
+      .then(
+        (response) => {
+          toast.success('Formulário enviado com sucesso!', {
+            position: 'top-right',
+            autoClose: 5000,
+          });
+        },
+        (error) => {
+          toast.error('Erro ao enviar o formulário. Tente novamente!', {
+            position: 'top-right',
+            autoClose: 5000,
+          });
+        }
+      );
+  };
 
   const acordeoes = [
     {
@@ -104,71 +175,103 @@ export const Trabalhadores = () => {
           </div>
         </div>
 
-       
-
         <div className="containerFlexEnquete" data-aos="fade-up">
           <div className="flexEnquete">
-              <img src={imgEnquete1} alt="" />
-              <div className="text">
-                <h1>Por que você não pode esperar?</h1>
-                <p>Saúde mental não é apenas um diferencial, é uma necessidade estratégica. Estudos revelam que problemas de saúde mental custam globalmente cerca de US$ 1 trilhão por ano em perda de produtividade (Organização Mundial da Saúde - OMS). <br /><br /> No Brasil, estima-se que 86% dos trabalhadores apresentem sinais de esgotamento mental, e empresas que investem em saúde mental e bem-estar observam um retorno de ate 500% no investimento, de acordo com dados do Fórum Econômico Mundial.</p>
-              </div>
+            <img src={imgEnquete1} alt="" />
+            <div className="text">
+              <h1>Por que você não pode esperar?</h1>
+              <p>
+                Saúde mental não é apenas um diferencial, é uma necessidade estratégica. Estudos revelam que problemas de saúde mental custam globalmente cerca de US$ 1 trilhão por ano em perda de produtividade (Organização Mundial da Saúde - OMS). <br /><br /> No Brasil, estima-se que 86% dos trabalhadores apresentem sinais de esgotamento mental, e empresas que investem em saúde mental e bem-estar observam um retorno de ate 500% no investimento, de acordo com dados do Fórum Econômico Mundial.
+              </p>
+            </div>
           </div>
           <div className="flexEnquete">
-              <div className="text">
-                <h1>Além disso:</h1>
-                <p><li>Colaboradores desmotivados podem reduzir a produtividade em ate 33%.</li> <br /> <li>A rotatividade custa para uma empresa, em média, o equivalente de 6 a 9 meses de salário do colaborador perdido.</li>  <br /> <li>Empresas com equipes saudáveis e engajadas têm 21% mais lucratividade, segundo a Gallup.</li> <br /><span>Agora, pergunte a si mesmo: quanto você está perdendo ao ignorar a saúde mental e a performance da sua equipe</span></p>
-              </div>
-              <img src={imgEnquete2} alt="" />
+            <div className="text">
+              <h1>Além disso:</h1>
+              <p>
+                <li>Colaboradores desmotivados podem reduzir a produtividade em ate 33%.</li> <br /> <li>A rotatividade custa para uma empresa, em média, o equivalente de 6 a 9 meses de salário do colaborador perdido.</li>  <br /> <li>Empresas com equipes saudáveis e engajadas têm 21% mais lucratividade, segundo a Gallup.</li> <br /><span>Agora, pergunte a si mesmo: quanto você está perdendo ao ignorar a saúde mental e a performance da sua equipe</span>
+              </p>
+            </div>
+            <img src={imgEnquete2} alt="" />
           </div>
-
         </div>
-        
+
         <div className="containerForm" data-aos="fade-up">
           <h1>
             Se você quer transformar sua empresa e <span>desbloquear um novo nível de faturamento</span>, entre em contato
             agora. Vamos mostrar como a Umbrella Mental pode ser o ponto de virada no <span>sucesso do seu negócio</span>.
-            
           </h1>
-          <form action="">
+          <form onSubmit={sendEmail}> {/* Aqui está o onSubmit */}
             <div className="logo">
               <img src={imgLogo} alt="" />
             </div>
 
             <div className="box">
               <label>Nome Completo</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="nome"
+                value={formData.nome}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="box">
-              <label>E-mail profissional </label>
-              <input type="text" />
+              <label>Seu E-mail</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="box">
               <label>Seu WhatsApp</label>
-              <input type="tel" />
+              <input
+                type="tel"
+                name="whatsapp"
+                value={formData.whatsapp}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="box">
               <label>Qual seu cargo?</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="cargo"
+                value={formData.cargo}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="box">
               <label>Qual o nome da sua empresa?</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="empresa"
+                value={formData.empresa}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="box">
               <label>Quantos funcionários tem na sua empresa?</label>
-              <input type="text" />
+              <input
+                type="text"
+                name="numFuncionarios"
+                value={formData.numFuncionarios}
+                onChange={handleChange}
+              />
             </div>
 
             <input type="submit" value="Enviar" />
           </form>
+          
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
