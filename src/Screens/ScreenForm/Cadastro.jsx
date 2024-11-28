@@ -233,10 +233,26 @@ export const Cadastro = () => {
                 </div>
 
                 <div className="box">
-                  <label htmlFor="birthdate">Data de Nascimento<sup>*</sup></label>
-                  <input type="date" name="birthdate" id="birthdate" required    value={formData.birthdate}
-            onChange={handleChange}/>
-                </div>
+  <label htmlFor="birthdate">
+    Data de Nascimento<sup>*</sup>
+  </label>
+  <input
+    type="date"
+    name="birthdate"
+    id="birthdate"
+    required
+    max="9999-12-31" // Limita o ano a no máximo 9999
+    value={formData.birthdate}
+    onChange={handleChange}
+    onInput={(e) => {
+      const value = e.target.value;
+      const year = value.split('-')[0]; // Obtém o ano
+      if (year.length > 4) {
+        e.target.value = value.slice(0, 4) + value.slice(4); // Limita o ano a 4 dígitos
+      }
+    }}
+  />
+</div>
 
                 <div className="box">
                   <label htmlFor="mensage">Motivo do acompanhamento psicológico<sup>*</sup></label>
@@ -412,7 +428,7 @@ Eles serão armazenados de maneira segura e criptografada, com acesso restrito a
 
       <div className="grupo">
   <input
-    type="checkbox"
+    type="radio"
     name="investimento"
     value="R$127,00 cada sessão ou 4 sessões R$427,00"
     onChange={handleInvestmentChange}
@@ -422,7 +438,7 @@ Eles serão armazenados de maneira segura e criptografada, com acesso restrito a
 
 <div className="grupo">
   <input
-    type="checkbox"
+    type="radio"
     name="investimento"
     value="R$197,00 cada sessão ou 4 sessões R$667,00"
     onChange={handleInvestmentChange}
@@ -432,7 +448,7 @@ Eles serão armazenados de maneira segura e criptografada, com acesso restrito a
 
 <div className="grupo">
   <input
-    type="checkbox"
+    type="radio"
     name="investimento"
     value="R$297,00 cada sessão ou 4 sessões R$997,00"
     onChange={handleInvestmentChange}
@@ -442,7 +458,7 @@ Eles serão armazenados de maneira segura e criptografada, com acesso restrito a
 
 <div className="grupo">
   <input
-    type="checkbox"
+    type="radio"
     name="investimento"
     value="R$497,00 cada sessão ou 4 sessões R$1.667,00"
     onChange={handleInvestmentChange}
