@@ -8,11 +8,16 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'public/robots.txt', // Localização do seu arquivo `robots.txt`
-          dest: '', // Copia para a raiz da pasta `dist`
+          src: 'public/robots.txt',  // Já está correto
+          dest: '', // Copia para a raiz da pasta dist
+        },
+        {
+          src: 'dist/sitemap.xml',   // Caso o sitemap seja gerado
+          dest: '', // Copia para a raiz da pasta dist
         },
       ],
     }),
+    
   ],
   server: {
     historyApiFallback: true, // Adiciona o fallback para o React Router
