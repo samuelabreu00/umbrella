@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "sitemap-generator https://www.umbrellamental.com/ -o ./dist/sitemap.xml"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -20,7 +21,8 @@
     "react-input-mask": "^2.0.4",
     "react-input-mask-next": "^3.0.0-alpha.12",
     "react-router-dom": "^6.28.0",
-    "react-toastify": "^10.0.6"
+    "react-toastify": "^10.0.6",
+    "sitemap-generator": "^7.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -32,7 +34,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "sitemap": "^8.0.0",
+    "sitemap-generator-cli": "^7.5.0",
     "vite": "^5.4.10",
+    "vite-plugin-sitemap": "^0.7.1",
     "vite-plugin-static-copy": "^2.2.0"
   }
 }
