@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run generate-sitemap",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-sitemap": "sitemap-generator https://www.umbrellamental.com/ -o ./dist/sitemap.xml"
+   "generate-sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
