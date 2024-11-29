@@ -90,7 +90,7 @@ export const Header = () => {
                     <span></span>
                     <li>
                       <NavLink 
-                        to='/serviçosempresariais' 
+                        to='/servicosempresariais' 
                         onClick={closeMenu}
                         className={({ isActive }) => isActive ? "active-link" : ""}
                       >
