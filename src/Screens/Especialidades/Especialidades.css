@@ -61,7 +61,7 @@ section.especialidades .containerEspecialidades .itensEspecialidade .content.bre
     top: 0;
     font-size: 20px;
     padding: 8px;
-    border-radius: 0 0 10px 0;
+    border-radius: 10px 0 10px 0;
 }
 section.especialidades .containerEspecialidades .itensEspecialidade .content:hover{
     transform: scale(1.1);
