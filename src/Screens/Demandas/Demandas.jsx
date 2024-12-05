@@ -88,7 +88,8 @@ O cuidado com o sono é extremamente importante para que você tenha uma boa qua
 
             <div className="title"  data-aos="fade-up" >
                 
-            <p>Se identifica com alguma dessas demandas? Entre em contato conosco! E caso sua demanda não se encaixa nas descrições anteriores, não se preocupe! Entre em contato conosco, pois nossos profissionais são qualificados para atender exatamente aquilo que você está precisando.
+            <p>Identificou-se com alguma dessas demandas? Entre em contato! 
+            E se a sua necessidade for diferente das mencionadas, não se preocupe. Nossos profissionais estão preparados para oferecer o suporte que você precisa.
                     </p>
                 {/* <h3>O que mais te aflinge?</h3> */}
                 <h3><span>Temos o profissional certo para lhe ajudar</span></h3>
