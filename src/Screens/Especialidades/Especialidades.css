@@ -48,6 +48,20 @@ section.especialidades .containerEspecialidades .itensEspecialidade .content{
     box-shadow: 0px 0px 11px -5px rgba(0,0,0,0.75);
     background-color: #fff;
     transition: .3s;
+    position: relative;
+}
+section.especialidades .containerEspecialidades .itensEspecialidade .content.breve{
+    opacity: .5;
+}
+section.especialidades .containerEspecialidades .itensEspecialidade .content.breve .textAbsolut{
+    color:#fff;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 0 0 10px 0;
 }
 section.especialidades .containerEspecialidades .itensEspecialidade .content:hover{
     transform: scale(1.1);

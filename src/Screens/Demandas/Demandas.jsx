@@ -81,16 +81,16 @@ export const Demandas = () => {
                     <p>
 O cuidado com o sono é extremamente importante para que você tenha uma boa qualidade de vida, entre as dificuldades mais comuns estão a insônia, a apneia do sono, a hipersonia. Alguns sintomas comuns são, dificuldade para adormecer, sonolência excessiva durante o dia, sensação de cansaço mesmo após uma noite de descanso. Um psicólogo da Umbrella poderá te auxiliar de acordo com sua demanda e utilizar técnicas que te ajudarão a desenvolver uma rotina de sono saudável.
 </p>
-
-                    <p>Se identifica com alguma dessas demandas? Entre em contato conosco! E caso sua demanda não se encaixa nas descrições anteriores, não se preocupe! Entre em contato conosco, pois nossos profissionais são qualificados para atender exatamente aquilo que você está precisando.
-                    </p>
                       <ButtonAgendarWhite name='Agendar minha consulta' />
                 </div>
                 
             </div>
 
             <div className="title"  data-aos="fade-up" >
-                <h3>O que mais te aflinge?</h3>
+                
+            <p>Se identifica com alguma dessas demandas? Entre em contato conosco! E caso sua demanda não se encaixa nas descrições anteriores, não se preocupe! Entre em contato conosco, pois nossos profissionais são qualificados para atender exatamente aquilo que você está precisando.
+                    </p>
+                {/* <h3>O que mais te aflinge?</h3> */}
                 <h3><span>Temos o profissional certo para lhe ajudar</span></h3>
             </div>
         </div>

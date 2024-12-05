@@ -22,7 +22,8 @@ export const Especialidades = () => {
                 </div>
                 
 
-                <div className="content" >
+                <div className="content breve" >
+                <h1 className="textAbsolut">EM BREVE</h1>
                     <div className="box">
                         <img src={iconPsiquiatria} alt="" />
                         <h2>Psiquiatria</h2>
@@ -30,7 +31,8 @@ export const Especialidades = () => {
                     <p>A psiquiatria é uma área médica voltada para o diagnóstico, tratamento e prevenção de transtornos mentais. Os médicos psiquiatras avaliam aspectos biológicos, psicológicos e sociais das condições, podendo prescrever medicamentos e indicar outros tratamentos, como a psicoterapia.</p>
                 </div>
 
-                <div className="content">
+                <div className="content breve">
+                    <h1 className="textAbsolut">EM BREVE</h1>
                     <div className="box">
                         <img src={iconNutrição} alt="" />
                         <h2>Nutrição</h2>
