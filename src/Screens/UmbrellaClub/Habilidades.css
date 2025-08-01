@@ -25,7 +25,7 @@ section.habilidades .containerHabilidades .boxTitles{
     width: 48%;
 }
 section.habilidades .containerHabilidades .boxTitles .titles h1{
-    font-size: 82px;
+    font-size: 77px;
     line-height: 80px;
     color: #f6e8fe;
 }
@@ -76,4 +76,5 @@ section.habilidades .containerHabilidades .boxTitles p{
         line-height: 45px;
     }
   
+
 }
